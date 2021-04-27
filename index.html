@@ -8,7 +8,13 @@
     <meta name="keywords" content="courses, events, education, blog, photography, health, marketing,
         mobile ui design, graphics design, web development, business">
     <meta name="author" content="Jan Šándor">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/5219ed4f69.js" crossorigin="anonymous"></script>
 </head>
 <!-- strukturalni elementy resetuji outline - headings -->
 <!-- <main> obaluje hlavni obsah stranky, neresetuje outline -->
@@ -25,553 +31,689 @@
 
 <!-- maji byt mapy iframe nebo obrazek? -->
 <!-- musi byt kazdy text v tagu???? -->
-<body>
-    <header id="top">
-        <!-- background image  -->
-        <!-- <img src="https://via.placeholder.com/1920x950.webp" alt> -->
-        <nav>
-            <h1>
-                <a href="index.html">
-                    <img src="img/logo.png" alt="EduPlus logo" width="61" height="50">
-                    EduPlus</a>
-            </h1>
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                    <i>dropdown arrow</i>
-                    <ul>
-                        <li><a href="">xHome</a></li>
-                        <li><a href="">xHome List</a></li>
-                        <li><a href="instructor-details.html">Instructor Details</a></li>
-                        <li><a href="faq.html">Faq</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="courses.html">Courses</a>
-                    <i>dropdown arrow</i>
-                    <ul>
-                        <li><a href="">xCourse</a></li>
-                        <li><a href="">xCourse List</a></li>
-                        <li><a href="course-details.html">Course Details</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="">xEvents</a>
-                    <i>dropdown arrow</i>
-                    <ul>
-                        <li><a href="">xEvents</a></li>
-                        <li><a href="">xEvents List</a></li>
-                        <li><a href="event-details.html">Events Details</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="">xPages</a>
-                    <i>dropdown arrow</i>
-                    <ul>
-                        <li><a href="">xPages</a></li>
-                        <li><a href="">xPages List</a></li>
-                        <li><a href="">xPages Details</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="blog.html">Blog</a>
-                    <i>dropdown arrow</i>
-                    <ul>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="">xBlog List</a></li>
-                        <li><a href="blog-details.html">Blog Details</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <a href="" rel="external"><i>Facebook icon</i></a>
-        <a href="" rel="external"><i>Youtube icon</i></a>
-        <a href=""><i>sign in icon</i>Sign in</a>
-        <a href=""><i>9 squares menu icon</i></a>
 
-        <!-- sekce header content -->
-        <section>
-            <!-- TAG -->            
-            <h2><i>3 squares icon</i>Welcome To EduPlus</h2>
-            <!-- TAG -->
-            <strong>More than 1200 Online Courses</strong>
-            <form>
-                <input type="search" placeholder="Search Courses">
-                <button type="button">
-                    <i>dropdown arrow icon</i>
-                </button>
-                <button type="submit">
-                    <i>search icon</i>
-                </button>
-            </form>
-            <p>Sed ut perspiciatis unde omnis natus error sit voluptatem</p>
-            <!-- vertical line -->
-            <i>24/7 hotline icon</i>
-            <p>ONLINE SUPPORT</p>
-            <a href="tel:+0123456789">+012 (345) 6789</a>
-        </section>        
-    </header>
-    <!-- facts -->
-    <ul>
-        <li>
-            <i>user group icon</i>
-            <p>3045+</p>
-            <p>Satisfied Students</p>
-        </li>
-        <li>
-            <i>books icon</i>
-            <p>7852+</p>
-            <p>Available Courses</p>
-        </li>
-        <li>
-            <i>graduate icon</i>
-            <p>9862+</p>
-            <p>Graduate Students</p>
-        </li>
-        <li>
-            <i>laptop icon</i>
-            <p>8963+</p>
-            <p>Active Courses</p>
-        </li>
-    </ul>
-    <!-- facts -->
-    <!-- sekce popular categories -->
-    <section>
-        <header>
-            <!-- TAG -->
-            <i>3 squares icon</i>
-            <h2>Popular Categories</h2>
-            <i>3 squares icon</i>
-            <!-- TAG -->
-            <h3>Course Categories</h3>
+<body>
+    <div class="grid">
+        <div class="col-12">
+            <!-- tento div jen zabaluje external link dohromady s nav -->
+            <nav id="top">
+                <h1>
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="EduPlus logo" width="61" height="50">
+                        EduPlus</a>
+                </h1>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="index.html">Home</a>
+                        <i>dropdown arrow</i>
+                        <ul class="submenu">
+                            <li class="submenu__item"><a href="">xHome</a></li>
+                            <li class="submenu__item"><a href="">xHome List</a></li>
+                            <li class="submenu__item"><a href="instructor-details.html">Instructor Details</a></li>
+                            <li class="submenu__item"><a href="faq.html">Faq</a></li>
+                            <li class="submenu__item"><a href="about.html">About Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a href="courses.html">Courses</a>
+                        <i>dropdown arrow</i>
+                        <ul class="submenu">
+                            <li class="submenu__item"><a href="">xCourse</a></li>
+                            <li class="submenu__item"><a href="">xCourse List</a></li>
+                            <li class="submenu__item"><a href="course-details.html">Course Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a href="">xEvents</a>
+                        <i>dropdown arrow</i>
+                        <ul class="submenu">
+                            <li class="submenu__item"><a href="">xEvents</a></li>
+                            <li class="submenu__item"><a href="">xEvents List</a></li>
+                            <li class="submenu__item"><a href="event-details.html">Events Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a href="">xPages</a>
+                        <i>dropdown arrow</i>
+                        <ul class="submenu">
+                            <li class="submenu__item"><a href="">xPages</a></li>
+                            <li class="submenu__item"><a href="">xPages List</a></li>
+                            <li class="submenu__item"><a href="">xPages Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a href="blog.html">Blog</a>
+                        <i>dropdown arrow</i>
+                        <ul class="submenu">
+                            <li class="submenu__item"><a href="blog.html">Blog</a></li>
+                            <li class="submenu__item"><a href="">xBlog List</a></li>
+                            <li class="submenu__item"><a href="blog-details.html">Blog Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__item"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="" rel="external"><i class="fab fa-facebook-f"></i></a>
+            <a href="" rel="external"><i class="fab fa-youtube"></i></a>
+            <a href="" class="btn--sign-in"><i class="far fa-user-circle icon"></i>Sign in</a>
+            <a href=""><i class="fas fa-th icon"></i></a>
+        </div>
+        <header class="col-12">
+            <!-- background image  -->
+            <!-- <img src="https://via.placeholder.com/1920x950.webp" alt> -->
+            <!-- sekce header content -->
+            <section>
+                <!-- TAG -->
+                <div class="tag tag--welcome">
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <h2 class="tag--title font--text">Welcome To EduPlus</h2>
+                </div>
+                <!-- TAG -->
+                <strong class="font--main strong">More than 1200 Online Courses</strong>
+                <form class="form--search">
+                    <input type="search" placeholder="Search Courses">
+                    <button class="form__button" type="button">
+                        <i class="fas fa-angle-down"></i>
+                    </button>
+                    <button type="submit">
+                        <i class="fas fa-search btn--orange-bg"></i>
+                    </button>
+                </form>
+                <div class="div--hotline">
+                <p class="div--hotline__item">Sed ut perspiciatis unde omnis natus error sit voluptatem</p>
+                <div class="div--vline div--hotline__item"></div>
+                    <!-- todo -->
+                <div class="div--hotline__item">
+                <i class="fas fa-phone icon"></i>
+                <div class="div--hotline-nevim">
+                <span class="span--hotline">ONLINE SUPPORT</span>
+                <a href="tel:+0123456789">+012 (345) 6789</a>
+                </div>
+
+                </div>
+            </div>
+            </section>
         </header>
-        <article>
-            <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272" height="203">
-            <h2>Graphics Design (UI)</h2>
-            <p>Web Design Course</p>
-            <i>Users icon</i>
-            <p>250</p>
-            <i>Book icon</i>
-            <p>800+ Courses</p>
-        </article>
-        <article>
-            <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272" height="203">
-            <h2>Business Studies</h2>
-            <p>Finance Studies</p>
-            <i>Users icon</i>
-            <p>320</p>
-            <i>Book icon</i>
-            <p>750+ Courses</p>
-        </article>
-        <article>
-            <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272" height="203">
-            <h2>Web Development</h2>
-            <p>Web Design Course</p>
-            <i>Users icon</i>
-            <p>320</p>
-            <i>Book icon</i>
-            <p>750+ Courses</p>
-        </article>
-        <article>
-            <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272" height="203">
-            <h2>Product Engineering</h2>
-            <p>Web Design Course</p>
-            <i>Users icon</i>
-            <p>320</p>
-            <i>Book icon</i>
-            <p>750+ Courses</p>
-        </article>
-        <article>
-            <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272" height="203">
-            <h2>Basic Photography</h2>
-            <p>Film Movies & Photography</p>
-            <i>Users icon</i>
-            <p>320</p>
-            <i>Book icon</i>
-            <p>750+ Courses</p>
-        </article>
-        <article>
-            <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272" height="203">
-            <h2>Medical & Health</h2>
-            <p>Doctors & Nursing</p>
-            <i>Users icon</i>
-            <p>320</p>
-            <i>Book icon</i>
-            <p>750+ Courses</p>
-        </article>
-        <article>
-            <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272" height="203">
-            <h2>Marketing Strategy</h2>
-            <p>Social Media Marketing</p>
-            <i>Users icon</i>
-            <p>250</p>
-            <i>Book icon</i>
-            <p>50+ Courses</p>
-        </article>
-        <article>
-            <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272" height="203">
-            <h2>Mobile UI Design</h2>
-            <p>Web Design Course</p>
-            <i>Users icon</i>
-            <p>320</p>
-            <i>Book icon</i>
-            <p>750+ Courses</p>
-        </article>
-    </section>
-    <!-- sekce popular courses -->
-    <section>
-        <!-- sekce ma obrazek/barvu pozadi -->
-        <header>
-            <!-- TAG -->
-            <i>3 squares icon</i>
-            <h2>Popular Courses</h2>
-            <i>3 squares icon</i>
-            <!-- TAG -->
-            <h3>Available Courses</h3>
-        </header>
-        <article>
-            <img src="https://via.placeholder.com/372x253.webp" alt="Course image" width="372" height="253">
-            <img src="https://via.placeholder.com/48x48.webp" alt="Teacher's avatar" width="48" height="48">
-            <p>Warner</p>
-            <p>$59.95</p>
-            <!-- TAG -->
-            <p>ENGLISH</p>
-            <!-- TAG -->
-            <ol>
-                <li><a href=""><i>Star icon</i></a></li>
-                <li><a href=""><i>Star icon</i></a></li>
-                <li><a href=""><i>Star icon</i></a></li>
-                <li><a href=""><i>Star icon</i></a></li>
-                <li><a href=""><i>Star icon</i></a></li>
-            </ol>
-            <h2>Best Courses For Learning English Courses</h2>
-            <!-- hline -->
-            <i>User group icon</i>
-            <p>25</p>
-            <i>Clock icon</i>
-            <p>36hr</p>
-            <i>Comments icon</i>
-            <p>2.5k</p>
-        </article>
-        <article>
-            <!-- background color/image -->
-            <!-- TAG -->
-            <p>BUSINESS</p>
-            <!-- TAG -->
-            <ol>
-                <li><a href=""><i>Star icon</i></a></li>
-                <li><a href=""><i>Star icon</i></a></li>
-                <li><a href=""><i>Star icon</i></a></li>
-                <li><a href=""><i>Star icon</i></a></li>
-                <li><a href=""><i>Star icon</i></a></li>
-            </ol>
-            <h2>Learning About It Consulting Business Solutions</h2>
-            <img src="https://via.placeholder.com/48x48.webp" alt="Teacher's avatar" width="48" height="48">
-            <p>Warner</p>
-            <p>$59.95</p>
-            <!-- course description -->
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolorque laudantium totam rem
-                aperiam</p>
-            <a href="">GET ENROLLED<i>right arrow icon</i></a>
-            <i>User group icon</i>
-            <p>25</p>
-            <i>Clock icon</i>
-            <p>36hr</p>
-            <i>Comments icon</i>
-            <p>2.5k</p>
-        </article>
-        <article>
-            <img src="https://via.placeholder.com/372x253.webp" alt="Course image" width="372" height="253">
-            <img src="https://via.placeholder.com/48x48.webp" alt="Teacher's avatar" width="48" height="48">
-            <p>Warner</p>
-            <p>$59.95</p>
-            <!-- TAG -->
-            <p>DESIGN</p>
-            <!-- TAG -->
-            <ol>
-                <li><a href=""><i>Star icon</i></a></li>
-                <li><a href=""><i>Star icon</i></a></li>
-                <li><a href=""><i>Star icon</i></a></li>
-                <li><a href=""><i>Star icon</i></a></li>
-                <li><a href=""><i>Star icon</i></a></li>
-            </ol>
-            <h2>Introduced About Basic Web Design For Begineers</h2>
-            <!-- hline -->
-            <i>User group icon</i>
-            <p>25</p>
-            <i>Clock icon</i>
-            <p>36hr</p>
-            <i>Comments icon</i>
-            <p>2.5k</p>
-        </article>
-        <a href="">VIEW ALL COURSES<i>right long arrow icon</i></a>
-    </section>
-    <!-- sekce popular courses -->
-    <!-- sekce photo & album -->
-    <section>
-        <header>
-            <!-- TAG -->
-            <i>3 squares icon</i>
-            <h2>Photo & Album</h2>
-            <i>3 squares icon</i>
-            <!-- TAG -->
-            <h3>Campus Gallery</h3>
-        </header>
-        <ul>
-            <li><a href="">Show All</a></li>
-            <li><a href="">University</a></li>
-            <li><a href="">Group Study</a></li>
-            <li><a href="">Awards</a></li>
-            <li><a href="">Students</a></li>
-            <li><a href="">Teachers</a></li>
-            <li><a href="">Campus</a></li>
+        <!-- facts -->
+        <ul class="col-12">
+            <li>
+                <i class="fas fa-users icon"></i>
+                <p>3045+</p>
+                <p>Satisfied Students</p>
+            </li>
+            <li>
+                <i class="fas fa-book icon"></i>
+                <p>7852+</p>
+                <p>Available Courses</p>
+            </li>
+            <li>
+                <i class="fas fa-graduation-cap icon"></i>
+                <p>9862+</p>
+                <p>Graduate Students</p>
+            </li>
+            <li>
+                <i class="fas fa-laptop-code icon"></i>
+                <p>8963+</p>
+                <p>Active Courses</p>
+            </li>
         </ul>
-        <article>
-            <h2>University</h2>
-            <p>University Campus</p>
-            <img src="https://via.placeholder.com/373x373.webp" alt="Album preview image" width="373" height="373">
-            <a href=""><i>righ arrow</i></a>
-        </article>
-        <article>
-            <h2>Group Study</h2>
-            <p>University Campus</p>
-            <img src="https://via.placeholder.com/373x373.webp" alt="Album preview image" width="373" height="373">
-            <a href=""><i>righ arrow</i></a>
-        </article>
-        <article>
-            <h2>Awards</h2>
-            <p>University Campus</p>
-            <img src="https://via.placeholder.com/373x373.webp" alt="Album preview image" width="373" height="373">
-            <a href=""><i>righ arrow</i></a>
-        </article>
-        <article>
-            <h2>Students</h2>
-            <p>University Campus</p>
-            <img src="https://via.placeholder.com/373x373.webp" alt="Album preview image" width="373" height="373">
-            <a href=""><i>righ arrow</i></a>
-        </article>
-        <article>
-            <h2>Teachers</h2>
-            <p>University Campus</p>
-            <img src="https://via.placeholder.com/373x373.webp" alt="Album preview image" width="373" height="373">
-            <a href=""><i>righ arrow</i></a>
-        </article>
-        <article>
-            <h2>Campus</h2>
-            <p>University Campus</p>
-            <img src="https://via.placeholder.com/373x373.webp" alt="Album preview image" width="373" height="373">
-            <a href=""><i>righ arrow</i></a>
-        </article>
-    </section>
-    <!-- sekce photo & album -->
-    <!-- sekce team members -->
-    <section>
-        <header>
-            <!-- TAG -->
-            <i>3 squares icon</i>
-            <h2>Team Members</h2>
-            <i>3 squares icon</i>
-            <!-- TAG -->
-            <h3>Expert Instructors</h3>
-        </header>
-        <article>
-            <img src="https://via.placeholder.com/372x253.webp" alt="Instructor photo" width="372" height="253">
-            <a href=""><i>add icon - social networks share menu</i></a>
+        <!-- facts -->
+        <!-- sekce popular categories -->
+        <section class="col-12">
+            <header>
+                <!-- TAG -->
+                <div class="tag">
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <h2 class="tag--title font--text">Popular Categories</h2>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                </div>
+                <!-- TAG -->
+                <h3 class="section--title font--main">Course Categories</h3>
+            </header>
+            <article>
+                <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272"
+                    height="203">
+                <h2>Graphics Design (UI)</h2>
+                <p>Web Design Course</p>
+                <i><i class="fas fa-users icon"></i>
+                <p>250</p>
+                <i class="fas fa-book icon"></i>
+                <p>800+ Courses</p>
+            </article>
+            <article>
+                <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272"
+                    height="203">
+                <h2>Business Studies</h2>
+                <p>Finance Studies</p>
+                <i class="fas fa-users icon"></i>
+                <p>320</p>
+                <i class="fas fa-book icon"></i>
+                <p>750+ Courses</p>
+            </article>
+            <article>
+                <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272"
+                    height="203">
+                <h2>Web Development</h2>
+                <p>Web Design Course</p>
+                <i class="fas fa-users icon"></i>
+                <p>320</p>
+                <i class="fas fa-book icon"></i>
+                <p>750+ Courses</p>
+            </article>
+            <article>
+                <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272"
+                    height="203">
+                <h2>Product Engineering</h2>
+                <p>Web Design Course</p>
+                <i><i class="fas fa-users icon"></i>
+                <p>320</p>
+                <i class="fas fa-book icon"></i>
+                <p>750+ Courses</p>
+            </article>
+            <article>
+                <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272"
+                    height="203">
+                <h2>Basic Photography</h2>
+                <p>Film Movies & Photography</p>
+                <i><i class="fas fa-users icon"></i>
+                <p>320</p>
+                <i class="fas fa-book icon"></i>
+                <p>750+ Courses</p>
+            </article>
+            <article>
+                <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272"
+                    height="203">
+                <h2>Medical & Health</h2>
+                <p>Doctors & Nursing</p>
+                <i><i class="fas fa-users icon"></i>
+                <p>320</p>
+                <i class="fas fa-book icon"></i>
+                <p>750+ Courses</p>
+            </article>
+            <article>
+                <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272"
+                    height="203">
+                <h2>Marketing Strategy</h2>
+                <p>Social Media Marketing</p>
+                <i><i class="fas fa-users icon"></i>
+                <p>250</p>
+                <i class="fas fa-book icon"></i>
+                <p>50+ Courses</p>
+            </article>
+            <article>
+                <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272"
+                    height="203">
+                <h2>Mobile UI Design</h2>
+                <p>Web Design Course</p>
+                <i><i class="fas fa-users icon"></i>
+                <p>320</p>
+                <i class="fas fa-book icon"></i>
+                <p>750+ Courses</p>
+            </article>
+        </section>
+        <!-- sekce popular courses -->
+        <section class="col-12 section--green-bg">
+            <!-- sekce ma obrazek/barvu pozadi -->
+            <header>
+                <!-- TAG -->
+                <div class="tag">
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <h2 class="tag--title font--text">Popular Courses</h2>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                </div>
+                <!-- TAG -->
+                <h3 class="section--title font--main">Available Courses</h3>
+            </header>
+            <article>
+                <img src="https://via.placeholder.com/372x253.webp" alt="Course image" width="372" height="253">
+                <img src="https://via.placeholder.com/48x48.webp" alt="Teacher's avatar" width="48" height="48">
+                <p>Warner</p>
+                <p>$59.95</p>
+                <!-- TAG -->
+                <p>ENGLISH</p>
+                <!-- TAG -->
+                <ol>
+                    <li><a href=""><i>Star icon</i></a></li>
+                    <li><a href=""><i>Star icon</i></a></li>
+                    <li><a href=""><i>Star icon</i></a></li>
+                    <li><a href=""><i>Star icon</i></a></li>
+                    <li><a href=""><i>Star icon</i></a></li>
+                </ol>
+                <h2>Best Courses For Learning English Courses</h2>
+                <!-- hline -->
+                <i class="fas fa-users icon"></i>
+                <p>25</p>
+                <i class="far fa-clock icon"></i>
+                <p>36hr</p>
+                <i class="far fa-comments icon"></i>
+                <p>2.5k</p>
+            </article>
+            <article>
+                <!-- background color/image -->
+                <!-- TAG -->
+                <p>BUSINESS</p>
+                <!-- TAG -->
+                <ol>
+                    <li><a href=""><i>Star icon</i></a></li>
+                    <li><a href=""><i>Star icon</i></a></li>
+                    <li><a href=""><i>Star icon</i></a></li>
+                    <li><a href=""><i>Star icon</i></a></li>
+                    <li><a href=""><i>Star icon</i></a></li>
+                </ol>
+                <h2>Learning About It Consulting Business Solutions</h2>
+                <img src="https://via.placeholder.com/48x48.webp" alt="Teacher's avatar" width="48" height="48">
+                <p>Warner</p>
+                <p>$59.95</p>
+                <!-- course description -->
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolorque laudantium totam
+                    rem
+                    aperiam</p>
+                <a href="">GET ENROLLED<i>right arrow icon</i></a>
+                <i class="fas fa-users icon"></i>
+                <p>25</p>
+                <i class="far fa-clock icon"></i>
+                <p>36hr</p>
+                <i class="far fa-comments icon"></i>
+                <p>2.5k</p>
+            </article>
+            <article>
+                <img src="https://via.placeholder.com/372x253.webp" alt="Course image" width="372" height="253">
+                <img src="https://via.placeholder.com/48x48.webp" alt="Teacher's avatar" width="48" height="48">
+                <p>Warner</p>
+                <p>$59.95</p>
+                <!-- TAG -->
+                <p>DESIGN</p>
+                <!-- TAG -->
+                <ol>
+                    <li><a href=""><i>Star icon</i></a></li>
+                    <li><a href=""><i>Star icon</i></a></li>
+                    <li><a href=""><i>Star icon</i></a></li>
+                    <li><a href=""><i>Star icon</i></a></li>
+                    <li><a href=""><i>Star icon</i></a></li>
+                </ol>
+                <h2>Introduced About Basic Web Design For Begineers</h2>
+                <!-- hline -->
+                <i class="fas fa-users icon"></i>
+                <p>25</p>
+                <i class="far fa-clock icon"></i>
+                <p>36hr</p>
+                <i class="far fa-comments icon"></i>
+                <p>2.5k</p>
+            </article>
+            <a href="">VIEW ALL COURSES<i>right long arrow icon</i></a>
+        </section>
+        <!-- sekce popular courses -->
+        <!-- sekce photo & album -->
+        <section class="col-12">
+            <header>
+                <!-- TAG -->
+                <div class="tag">
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <h2 class="tag--title font--text">Photo & Album</h2>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                </div>
+                <!-- TAG -->
+                <h3 class="section--title font--main">Campus Gallery</h3>
+            </header>
             <ul>
-                <li><a href=""><i>twitter icon</i></a></li>
-                <li><a href=""><i>youtube icon</i></a></li>
-                <li><a href=""><i>facebook icon</i></a></li>
+                <li><a href="">Show All</a></li>
+                <li><a href="">University</a></li>
+                <li><a href="">Group Study</a></li>
+                <li><a href="">Awards</a></li>
+                <li><a href="">Students</a></li>
+                <li><a href="">Teachers</a></li>
+                <li><a href="">Campus</a></li>
             </ul>
-            <h2>Somalie D silva</h2>
-            <p>Math Teacher</p>
-            <!-- hline -->
-            <i>book icon</i>
-            <p>750+ Courses</p>
-        </article>
-        <article>
-            <img src="https://via.placeholder.com/372x253.webp" alt="Instructor photo" width="372" height="253">
-            <a href=""><i>add icon - social networks share menu</i></a>
-            <ul>
-                <li><a href=""><i>twitter icon</i></a></li>
-                <li><a href=""><i>youtube icon</i></a></li>
-                <li><a href=""><i>facebook icon</i></a></li>
-            </ul>
-            <h2>David D Warner</h2>
-            <p>English teacher</p>
-            <!-- hline -->
-            <i>book icon</i>
-            <p>3850+ Courses</p>
-        </article>
-        <article>
-            <img src="https://via.placeholder.com/372x253.webp" alt="Instructor photo" width="372" height="253">
-            <a href=""><i>add icon - social networks share menu</i></a>
-            <ul>
-                <li><a href=""><i>twitter icon</i></a></li>
-                <li><a href=""><i>youtube icon</i></a></li>
-                <li><a href=""><i>facebook icon</i></a></li>
-            </ul>
-            <h2>Xavi Toni Crusse</h2>
-            <p>Computer Teacher</p>
-            <!-- hline -->
-            <i>book icon</i>
-            <p>632+ Courses</p>
-        </article>
-        <article>
-            <img src="https://via.placeholder.com/372x253.webp" alt="Instructor photo" width="372" height="253">
-            <a href=""><i>add icon - social networks share menu</i></a>
-            <ul>
-                <li><a href=""><i>twitter icon</i></a></li>
-                <li><a href=""><i>youtube icon</i></a></li>
-                <li><a href=""><i>facebook icon</i></a></li>
-            </ul>
-            <h2>Shaine Watson</h2>
-            <p>Web Designer</p>
-            <!-- hline -->
-            <i>book icon</i>
-            <p>985+ Courses</p>
-        </article>
-    </section>
-    <!-- sekce team members -->
-    <!-- sekce latest events -->
-    <section>
-        <header>
-            <!-- TAG -->
-            <i>3 squares icon</i>
-            <h2>Latest Events</h2>
-            <i>3 squares icon</i>
-            <!-- TAG -->
-            <h3>Upcoming Events</h3>
-        </header>
-        <article>
-            <img src="https://via.placeholder.com/772x383.webp" alt="Event image" width="772" height="383">
-            <!-- circle with price -->
-            <p><i>calendar icon</i><time datetime="2020-11-25">25 NOV 2020</time></p>
-            <p><i>clock icon</i><time datetime="2020-11-25 08:00">08</time> AM - <time datetime="2020-11-25 21:00">09</time> PM</p>
-            <p><i>location icon</i>PARIS, FRANCE</p>
-            <h2>Web Design & Development Conference 2020</h2>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-                rem aperiam, eaque ipsa quae ab illo inventore veritatis et</p>
-            <a href="">JOIN EVENT<i>right long arrow icon</i></a>
-        </article>
-        <article>
-            <img src="https://via.placeholder.com/373x320.webp" alt="Event image" width="373" height="320">
-            <!-- circle with price -->
-            <p><i>calendar icon</i><time datetime="2020-11-25">25 NOV 2020</time></p>
-            <p><i>clock icon</i><time datetime="2020-11-25 08:00">08</time> AM - <time datetime="2020-11-25 21:00">09</time> PM</p>
-            <h2>Annual Conference 2020</h2>
-            <a href="">JOIN EVENT<i>right long arrow icon</i></a>
-        </article>
-        <article>
-            <img src="https://via.placeholder.com/373x320.webp" alt="Event image" width="373" height="320">
-            <!-- circle with price -->
-            <p><i>calendar icon</i><time datetime="2020-11-25">25 NOV 2020</time></p>
-            <p><i>clock icon</i><time datetime="2020-11-25 08:00">08</time> AM - <time datetime="2020-11-25 21:00">09</time> PM</p>
-            <h2>Annual Conference 2020</h2>
-            <a href="">JOIN EVENT<i>right long arrow icon</i></a>
-        </article>
-        <a href="">VIEW ALL EVENTS<i>right long arrow icon</i></a>
-    </section>
-    <!-- sekce latest events -->
-    <!-- sekce students feedback -->
-    <!-- ############## od teto sekce jsou <i> vnoreny do <p> #########################-->
-    <section>
-        <header>
-            <!-- TAG -->
-            <h2><i>3 squares icon</i>Students Feedback<i>3 squares icon</i></h2>
-            <!-- TAG -->
-            <h3>What Our Students Say</h3>
-        </header>
-        <article>
+            <article>
+                <h2>University</h2>
+                <p>University Campus</p>
+                <img src="https://via.placeholder.com/373x373.webp" alt="Album preview image" width="373" height="373">
+                <a href=""><i>righ arrow</i></a>
+            </article>
+            <article>
+                <h2>Group Study</h2>
+                <p>University Campus</p>
+                <img src="https://via.placeholder.com/373x373.webp" alt="Album preview image" width="373" height="373">
+                <a href=""><i>righ arrow</i></a>
+            </article>
+            <article>
+                <h2>Awards</h2>
+                <p>University Campus</p>
+                <img src="https://via.placeholder.com/373x373.webp" alt="Album preview image" width="373" height="373">
+                <a href=""><i>righ arrow</i></a>
+            </article>
+            <article>
+                <h2>Students</h2>
+                <p>University Campus</p>
+                <img src="https://via.placeholder.com/373x373.webp" alt="Album preview image" width="373" height="373">
+                <a href=""><i>righ arrow</i></a>
+            </article>
+            <article>
+                <h2>Teachers</h2>
+                <p>University Campus</p>
+                <img src="https://via.placeholder.com/373x373.webp" alt="Album preview image" width="373" height="373">
+                <a href=""><i>righ arrow</i></a>
+            </article>
+            <article>
+                <h2>Campus</h2>
+                <p>University Campus</p>
+                <img src="https://via.placeholder.com/373x373.webp" alt="Album preview image" width="373" height="373">
+                <a href=""><i>righ arrow</i></a>
+            </article>
+        </section>
+        <!-- sekce photo & album -->
+        <!-- sekce team members -->
+        <section class="col-12">
+            <header>
+                <!-- TAG -->
+                <div class="tag">
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <h2 class="tag--title font--text">Team Members</h2>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                </div>
+                <!-- TAG -->
+                <h3 class="section--title font--main">Expert Instructors</h3>
+            </header>
+            <article>
+                <img src="https://via.placeholder.com/372x253.webp" alt="Instructor photo" width="372" height="253">
+                <a href=""><i>add icon - social networks share menu</i></a>
+                <ul>
+                    <li><a href=""><i>twitter icon</i></a></li>
+                    <li><a href=""><i>youtube icon</i></a></li>
+                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                </ul>
+                <h2>Somalie D silva</h2>
+                <p>Math Teacher</p>
+                <!-- hline -->
+                <i class="fas fa-book icon"></i>
+                <p>750+ Courses</p>
+            </article>
+            <article>
+                <img src="https://via.placeholder.com/372x253.webp" alt="Instructor photo" width="372" height="253">
+                <a href=""><i>add icon - social networks share menu</i></a>
+                <ul>
+                    <li><a href=""><i>twitter icon</i></a></li>
+                    <li><a href=""><i>youtube icon</i></a></li>
+                    <li><a href=""><i>facebook icon</i></a></li>
+                </ul>
+                <h2>David D Warner</h2>
+                <p>English teacher</p>
+                <!-- hline -->
+                <i class="fas fa-book icon"></i>
+                <p>3850+ Courses</p>
+            </article>
+            <article>
+                <img src="https://via.placeholder.com/372x253.webp" alt="Instructor photo" width="372" height="253">
+                <a href=""><i>add icon - social networks share menu</i></a>
+                <ul>
+                    <li><a href=""><i>twitter icon</i></a></li>
+                    <li><a href=""><i>youtube icon</i></a></li>
+                    <li><a href=""><i>facebook icon</i></a></li>
+                </ul>
+                <h2>Xavi Toni Crusse</h2>
+                <p>Computer Teacher</p>
+                <!-- hline -->
+                <i class="fas fa-book icon"></i>
+                <p>632+ Courses</p>
+            </article>
+            <article>
+                <img src="https://via.placeholder.com/372x253.webp" alt="Instructor photo" width="372" height="253">
+                <a href=""><i>add icon - social networks share menu</i></a>
+                <ul>
+                    <li><a href=""><i>twitter icon</i></a></li>
+                    <li><a href=""><i>youtube icon</i></a></li>
+                    <li><a href=""><i>facebook icon</i></a></li>
+                </ul>
+                <h2>Shaine Watson</h2>
+                <p>Web Designer</p>
+                <!-- hline -->
+                <i class="fas fa-book icon"></i>
+                <p>985+ Courses</p>
+            </article>
+        </section>
+        <!-- sekce team members -->
+        <!-- sekce latest events -->
+        <section class="col-12">
+            <header>
+                <!-- TAG -->
+                <div class="tag">
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <h2 class="tag--title font--text">Latest Events</h2>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                </div>
+                <!-- TAG -->
+                <h3 class="section--title font--main">Upcoming Events</h3>
+            </header>
+            <article>
+                <img src="https://via.placeholder.com/772x383.webp" alt="Event image" width="772" height="383">
+                <!-- circle with price -->
+                <p><i class="far fa-calendar-alt icon"></i><time datetime="2020-11-25">25 NOV 2020</time></p>
+                <p><i class="far fa-clock icon"></i><time datetime="2020-11-25 08:00">08</time> AM - <time
+                        datetime="2020-11-25 21:00">09</time> PM</p>
+                <p><i class="fas fa-map-marker-alt icon"></i>PARIS, FRANCE</p>
+                <h2>Web Design & Development Conference 2020</h2>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam
+                    rem aperiam, eaque ipsa quae ab illo inventore veritatis et</p>
+                <a href="">JOIN EVENT<i>right long arrow icon</i></a>
+            </article>
+            <article>
+                <img src="https://via.placeholder.com/373x320.webp" alt="Event image" width="373" height="320">
+                <!-- circle with price -->
+                <p><i class="far fa-calendar-alt icon"></i><time datetime="2020-11-25">25 NOV 2020</time></p>
+                <p><i class="far fa-clock icon"></i><time datetime="2020-11-25 08:00">08</time> AM - <time
+                        datetime="2020-11-25 21:00">09</time> PM</p>
+                <h2>Annual Conference 2020</h2>
+                <a href="">JOIN EVENT<i>right long arrow icon</i></a>
+            </article>
+            <article>
+                <img src="https://via.placeholder.com/373x320.webp" alt="Event image" width="373" height="320">
+                <!-- circle with price -->
+                <p><i class="far fa-calendar-alt icon"></i><time datetime="2020-11-25">25 NOV 2020</time></p>
+                <p><i class="far fa-clock icon"></i><time datetime="2020-11-25 08:00">08</time> AM - <time
+                        datetime="2020-11-25 21:00">09</time> PM</p>
+                <h2>Annual Conference 2020</h2>
+                <a href="">JOIN EVENT<i>right long arrow icon</i></a>
+            </article>
+            <a href="">VIEW ALL EVENTS<i>right long arrow icon</i></a>
+        </section>
+        <!-- sekce latest events -->
+        <!-- sekce students feedback -->
+        <!-- ############## od teto sekce jsou <i> vnoreny do <p> #########################-->
+        <section class="col-12">
+            <header>
+                <!-- TAG -->
+                <div class="tag">
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <h2 class="tag--title font--text">Students Feedback</h2>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                </div>
+                <!-- TAG -->
+                <h3 class="section--title font--main">What Our Students Say</h3>
+            </header>
+            <article>
+                <p>Sed ut perspiciatis unde omnis natus error sit voluptatem accusantium dolore mque lauda enim ad
+                    minima
+                    veniam quis nostrumexe rcitationem ullam corporise</p>
+                <p>Rnimad minima veniam quis nostreercit ationem ullam corporis suscipit laboriosam nisiut</p>
+                <img src="https://via.placeholder.com/53x53.webp" alt="User's avatar" width="53" height="53">
+                <h2>Sousa Fernandes</h2>
+                <p>CEO & Founder</p>
+                <a href=""><i>left arrow prev feedback</i></a>
+                <a href=""><i>right arrow next feedback</i></a>
+                <i>quotation marks</i>
+            </article>
+            <img src="https://via.placeholder.com/133x133.webp" alt="Student photo" width="133" height="133">
+            <img src="https://via.placeholder.com/133x133.webp" alt="Student photo" width="133" height="133">
+            <img src="https://via.placeholder.com/133x133.webp" alt="Student photo" width="133" height="133">
+            <img src="https://via.placeholder.com/133x133.webp" alt="Student photo" width="133" height="133">
+            <img src="https://via.placeholder.com/133x133.webp" alt="Student photo" width="133" height="133">
+            <img src="https://via.placeholder.com/133x133.webp" alt="Student photo" width="133" height="133">
+            <img src="https://via.placeholder.com/133x133.webp" alt="Student photo" width="133" height="133">
+            <img src="https://via.placeholder.com/133x133.webp" alt="Student photo" width="133" height="133">
+        </section>
+        <!-- sekce students feedback -->
+        <!-- sekce become an instructor -->
+        <section class="col-12">
+            <img src="https://via.placeholder.com/503x502.webp" alt width="503" height="502">
+            <img src="https://via.placeholder.com/333x353.webp" alt width="333" height="353">
+            <header>
+                <!-- TAG -->
+                <div class="tag">
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <h2 class="tag--title font--text">Build A Career</h2>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                </div>
+                <!-- TAG -->
+                <h3 class="section--title font--main">Become an Instructor</h3>
+            </header>
             <p>Sed ut perspiciatis unde omnis natus error sit voluptatem accusantium dolore mque lauda enim ad minima
-                veniam quis nostrumexe rcitationem ullam corporise</p>
+                veniam
+                quis nostrumexe rcitationem ullam corporise</p>
+            <h3><i class="fas fa-laptop-code icon"></i>Digitalization</h3>
             <p>Rnimad minima veniam quis nostreercit ationem ullam corporis suscipit laboriosam nisiut</p>
-            <img src="https://via.placeholder.com/53x53.webp" alt="User's avatar" width="53" height="53">
-            <h2>Sousa Fernandes</h2>
-            <p>CEO & Founder</p>
-            <a href=""><i>left arrow prev feedback</i></a>
-            <a href=""><i>right arrow next feedback</i></a>
-            <i>quotation marks</i>
-        </article>
-        <img src="https://via.placeholder.com/133x133.webp" alt="Student photo" width="133" height="133">
-        <img src="https://via.placeholder.com/133x133.webp" alt="Student photo" width="133" height="133">
-        <img src="https://via.placeholder.com/133x133.webp" alt="Student photo" width="133" height="133">
-        <img src="https://via.placeholder.com/133x133.webp" alt="Student photo" width="133" height="133">
-        <img src="https://via.placeholder.com/133x133.webp" alt="Student photo" width="133" height="133">
-        <img src="https://via.placeholder.com/133x133.webp" alt="Student photo" width="133" height="133">
-        <img src="https://via.placeholder.com/133x133.webp" alt="Student photo" width="133" height="133">
-        <img src="https://via.placeholder.com/133x133.webp" alt="Student photo" width="133" height="133">
-    </section>
-    <!-- sekce students feedback -->
-    <!-- sekce become an instructor -->
-    <section>
-        <img src="https://via.placeholder.com/503x502.webp" alt width="503" height="502">
-        <img src="https://via.placeholder.com/333x353.webp" alt width="333" height="353">
-        <header>
-            <!-- TAG -->
-            <h2><i>3 squares icon</i>Build A Career<i>3 squares icon</i></h2>
-            <!-- TAG -->
-            <h3>Become an Instructor</h3>
-        </header>
-        <p>Sed ut perspiciatis unde omnis natus error sit voluptatem accusantium dolore mque lauda enim ad minima veniam
-            quis nostrumexe rcitationem ullam corporise</p>
-        <h3><i>laptop icon</i>Digitalization</h3>
-        <p>Rnimad minima veniam quis nostreercit ationem ullam corporis suscipit laboriosam nisiut</p>
-        <h3><i>book with heart icon</i>Book Friendly</h3>
-        <p>Rnimad minima veniam quis nostreercit ationem ullam corporis suscipit laboriosam nisiut</p>
-        <a href="">JOIN WITH US<i>long right arrow</i></a>
-        <a href="">BECOME A PARTNER</a>
-    </section>
-    <!-- sekce become an instructor -->
-    <!-- sekce artices & tipes -->
-    <section>
-        <header>
-            <!-- TAG -->
-            <h2><i>3 squares icon</i>Artices & Tipes<i>3 squares icon</i></h2>
-            <!-- TAG -->
-            <h3>Latest News & Blog</h3>
-        </header>
-        <article>
-            <img src="https://via.placeholder.com/372x353.webp" alt="Blog post preview image" width="372" height="353">
-            <p><i>calendar icon</i><time datetime="2020-11-25">25 NOV 2020</time></p>
-            <p><i>comments icon</i>COM(30)</p>
-            <h2>Learning Resources In Challenec Times Online Workshop</h2>
-            <img src="https://via.placeholder.com/38x38.webp" alt="Blog post author avatar" width="38" height="38">
-            <p>David Simala</p>
-            <a href=""><i>right arrow - read post</i></a>
-        </article>
-        <article>
-            <img src="https://via.placeholder.com/372x353.webp" alt="Blog post preview image" width="372" height="353">
-            <p><i>calendar icon</i><time datetime="2020-11-25">25 NOV 2020</time></p>
-            <p><i>comments icon</i>COM(30)</p>
-            <h2>Djang Higlights Models Admin And Harness Relational Database</h2>
-            <img src="https://via.placeholder.com/38x38.webp" alt="Blog post author avatar" width="38" height="38">
-            <p>David Simala</p>
-            <a href=""><i>right arrow - read post</i></a>
-        </article>
-        <article>
-            <img src="https://via.placeholder.com/372x353.webp" alt="Blog post preview image" width="372" height="353">
-            <p><i>calendar icon</i><time datetime="2020-11-25">25 NOV 2020</time></p>
-            <p><i>comments icon</i>COM(30)</p>
-            <h2>Smash Podcast Episode With Laura Kalbag What Is Online Privacy</h2>
-            <img src="https://via.placeholder.com/38x38.webp" alt="Blog post author avatar" width="38" height="38">
-            <p>David Simala</p>
-            <a href=""><i>right arrow - read post</i></a>
-        </article>
-    </section>
-    <!-- sekce artices & tipes -->
-    <!-- brands -->
-    <ul>
-        <li><img src="img/placeholder.com-logo1.png" alt="Brand logo" width="193" height="85"></li>
-        <li><img src="img/placeholder.com-logo1.png" alt="Brand logo" width="193" height="85"></li>
-        <li><img src="img/placeholder.com-logo1.png" alt="Brand logo" width="193" height="85"></li>
-        <li><img src="img/placeholder.com-logo1.png" alt="Brand logo" width="193" height="85"></li>
-        <li><img src="img/placeholder.com-logo1.png" alt="Brand logo" width="193" height="85"></li>
-    </ul>
-    <!-- brands -->
-    <footer>
-        <a href=""><img src="img/logo.png" alt="EduPlus logo" width="61" height="50">EduPlus</a>
+            <h3><i class="fas fa-book icon"></i>Book Friendly</h3>
+            <p>Rnimad minima veniam quis nostreercit ationem ullam corporis suscipit laboriosam nisiut</p>
+            <a href="">JOIN WITH US<i class="fas fa-long-arrow-alt-right"></i></a>
+            <a href="">BECOME A PARTNER</a>
+        </section>
+        <!-- sekce become an instructor -->
+        <!-- sekce artices & tipes -->
+        <section class="col-12">
+            <header>
+                <!-- TAG -->
+                <div class="tag">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <!-- <i class="fas fa-square-full icon icon--square"></i>
+                <i class="fas fa-square-full icon icon--square"></i>
+                <i class="fas fa-square-full icon icon--square"></i> -->
+                    <h2 class="tag--title font--text">Artices & Tipes</h2>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                    <i class="fas fa-square-full icon icon--square"></i>
+                </div>
+                <!-- TAG -->
+                <h3 class="section--title font--main">Latest News & Blog</h3>
+            </header>
+            <div class="flex--blog-previews">
+                <article class="flex--blog-previews__item">
+                    <div class="div--relative">
+                        <img src="img/index/latest_news/article-img-1.png" alt="Blog post preview image" width="370"
+                            height="350">
+
+                        <div class="div--blog-preview-content">
+                            <div class="div--info">
+                                <i class="far fa-calendar-alt icon"></i><time class="icon--title font--text"
+                                    datetime="2020-11-25">25&nbsp;NOV&nbsp;2020</time>
+                                <i class="far fa-comments icon"></i><span class="icon--title font--text">COM(30)</span>
+                            </div>
+
+                            <h2 class="font--main">Learning Resources In Challenec Times Online Workshop</h2>
+
+                            <div class="div--blog-author">
+                                <img src="img/index/latest_news/article-author-avatar.png" alt="Blog post author avatar"
+                                    width="38" height="38">
+                                <span>David Simala</span>
+                            </div>
+
+                            <a href="" class="btn btn--green-bg"><i class="fas fa-arrow-right btn__icon"></i></a>
+                        </div>
+                </article>
+
+                <article class="flex--blog-previews__item">
+                    <div class="div--relative">
+                        <img src="img/index/latest_news/article-img-2.png" alt="Blog post preview image" width="370"
+                            height="350">
+                        <div class="div--blog-preview-content">
+                            <div class="div--info">
+                                <i class="far fa-calendar-alt icon"></i><time class="icon--title font--text"
+                                    datetime="2020-11-25">25&nbsp;NOV&nbsp;2020</time>
+                                <i class="far fa-comments icon"></i><span class="icon--title font--text">COM(30)</span>
+                            </div>
+                            <h2 class="font--main">Djang Higlights Models Admin And Harness Relational Database</h2>
+                            <div class="div--blog-author">
+                                <img src="img/index/latest_news/article-author-avatar.png" alt="Blog post author avatar"
+                                    width="38" height="38">
+                                <span>David Simala</span>
+                            </div>
+                        </div>
+                        <a href="" class="btn btn--green-bg"><i class="fas fa-arrow-right btn__icon"></i></a>
+                    </div>
+                </article>
+                
+                <article class="flex--blog-previews__item">
+                    <div class="div--relative">
+                        <img src="img/index/latest_news/article-img-3.png" alt="Blog post preview image" width="370"
+                            height="350">
+
+                        <div class="div--blog-preview-content">
+                            <div class="div--info">
+                                <i class="far fa-calendar-alt icon"></i><time class="icon--title font--text"
+                                    datetime="2020-11-25">25&nbsp;NOV&nbsp;2020</time>
+                                <i class="far fa-comments icon"></i><span class="icon--title font--text">COM(30)</span>
+                            </div>
+
+                            <h2 class="font--main">Smash Podcast Episode With Laura Kalbag What Is Online Privacy</h2>
+                            <div class="div--blog-author">
+                                <img src="img/index/latest_news/article-author-avatar.png" alt="Blog post author avatar"
+                                    width="38" height="38">
+                                <span>David Simala</span>
+                            </div>
+
+                            <a href="" class="btn btn--green-bg"><i class="fas fa-arrow-right btn__icon"></i></a>
+                        </div>
+                </article>
+            </div>
+        </section>
+        <!-- sekce artices & tipes -->
+        <!-- brands -->
+        <ul class="col-12 flex--brands">
+            <li class="flex--brands__item img--brands"><img src="img/brands/mountain.png" alt="Brand logo" width="162"
+                    height="90"></li>
+            <li class="flex--brands__item img--brands"><img src="img/brands/circle.png" alt="Brand logo" width="164"
+                    height="93"></li>
+            <li class="flex--brands__item img--brands"><img src="img/brands/globe.png" alt="Brand logo" width="104"
+                    height="96"></li>
+            <li class="flex--brands__item img--brands"><img src="img/brands/paper.png" alt="Brand logo" width="193"
+                    height="85"></li>
+            <li class="flex--brands__item img--brands"><img src="img/brands/sumit.png" alt="Brand logo" width="117"
+                    height="95"></li>
+        </ul>
+        <!-- brands -->
+        <footer class="col-12">
+            <a href=""><img src="img/logo.png" alt="EduPlus logo" width="61" height="50">EduPlus</a>
             <ul>
                 <li><a href="" rel="external"><i>facebook icon</i>Facebook</a></li>
                 <li><a href="" rel="external"><i>twitter icon</i>Twitter</a></li>
@@ -599,15 +741,18 @@
             </ul>
             <form>
                 <p>Newsletters</p>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam
+                    rem aperiam</p>
                 <input type="email" placeholder="Entere Your Email">
                 <button type="submit">
-                    <i>long right arrow</i>
+                    <i class="fas fa-long-arrow-alt-right"></i>
                 </button>
             </form>
             <a href="#top"><i>up arrow icon</i></a>
             <small>Copytight &copy; EduPlus All Rights Reserved.</small>
-    </footer>
+        </footer>
+    </div>
 </body>
 
 </html>

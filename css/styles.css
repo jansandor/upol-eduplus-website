@@ -1,0 +1,482 @@
+/* hodnoty vw jsou +/- spocitane podle PSD predlohy jako (N[px])*100/1920 */
+
+/*
+main font color - dark green, usually headlines: #062a35
+secondary font color, light gray, usually texts: #708389
+orange color: #ea5822
+white: ffffff
+blue: #3662ff
+light blue/gray: #eaf4f7
+
+
+font main Roboto
+font text Hind
+*/
+
+p{
+    padding: 0;
+    margin: 0;
+}
+
+.font--main{
+    font-family: 'Roboto', sans-serif;
+    color: #062a35;
+}
+.section--green-bg .font--main{
+    color: white;
+}
+
+.font--text{
+    font-family: 'Hind', sans-serif;
+}
+
+.btn--sign-in{
+    color: #062a35;
+    font-size: 1em;
+}
+
+.section--green-bg{
+    background-color: #062a35;
+}
+
+body{
+    /* padding: 0 3.65vw; */
+    margin: 0; /* 3.65vw; */
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.icon{
+    color: #ea5822;
+}
+
+.icon--title{
+    color: #708389;
+    font-size: 1rem;
+    font-weight: 600;
+
+    /* display: inline-block;
+    margin-left: 10px; */
+    display: inline-block;
+    margin-right: 1.75rem;
+}
+
+.tag{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tag--welcome{
+    justify-content: flex-start;
+}
+
+.icon--square{
+    font-size: 5px;
+    margin: 2.5px;
+}
+
+.square{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: #ea5822;
+    margin: 2.5px;
+}
+
+.div--relative{
+    position: relative;
+}
+
+.div--blog-preview-content{
+    /* display: block;
+    box-sizing: border-box; */
+
+    padding: 2vw;
+    border-right: 2px solid #e6e6e6;
+    border-bottom: 2px solid #e6e6e6;
+    border-left: 2px solid #e6e6e6;
+}
+
+.div--blog-preview-content .div--info{
+    display: flex;
+    align-items: baseline;
+}
+
+/*[class*="icon"]*/
+.div--blog-preview-content .div--info .icon{
+    /* display: inline-block; */
+    margin-right: 7px;
+    /* vertical-align: middle; */
+}
+
+.div--blog-preview-content .font--main{
+    font-size: 1.5rem;
+}
+
+.btn{
+    display: inline-block;
+    box-sizing: border-box;
+
+    width: 60px;
+    height: 60px;
+
+    padding: 1.015625rem 1.106770833rem;
+
+    font-size: 1.25rem;
+    /* line-height: 28px; rem? ve photopei to tak je ale myslim, ze to dela jen neporadek */
+    text-align: center;
+    
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.btn__icon{
+    vertical-align: middle;
+}
+
+/*active, hover apod*/
+.btn--orange-bg{
+    background-color: #ea5822;
+    color: white;
+}
+
+.btn--green-bg{
+    background-color: #062a35;
+    color: white;
+}
+
+.tag--title{
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #ea5822;
+    padding: 0 1rem;
+    margin: 0;
+    /* margin: 1rem 0; */
+    text-align: center;
+
+    /* letter-spacing: -1px; */
+    /* line-height: 85px; 5,3125 rem? */
+}
+
+.section--title{
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 0 4.6875vw 0;
+    text-align: center;
+
+    /* letter-spacing: -1px; */
+    /* line-height: 85px; 5,3125 rem? */
+}
+
+.strong{
+    display: inline-block;
+    font-size: 5rem;
+    /* max-width: 45%; zalomeni za 1200*/
+}
+
+.menu{
+    display: flex;
+    width: 100%;
+    list-style: none;
+}
+
+.menu a{
+    display: block;
+    padding: 1em;
+}
+
+.menu__item{
+    flex: 1;
+}
+
+.menu__item:hover .submenu{
+    display: block;
+    z-index: 100;
+}
+
+.submenu{
+    display: none;
+    position: absolute;
+    list-style: none;
+}
+
+.submenu__item{
+
+}
+
+.flex--brands{
+    background-color: #ea5822;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; /*around */
+    /* align-content: center; */
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.flex--brands__item{
+    padding: 2%;
+    /* flex: 1; */
+}
+
+.img--brands{
+
+}
+
+.flex--blog-previews{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 6.770833333vw;
+}
+
+@media (min-width: 1823px){
+    .flex--blog-previews{
+        justify-content: space-between; /*mezery mezi home/latest news*/
+    }
+
+    .flex--blog-previews__item{
+        
+    }
+}
+
+.flex--blog-previews__item{
+    flex: 1;
+    max-width: 370px; /* dle obrazku*/
+    /* margin: 1.822916667vw; */
+}
+
+/* nova trida pro img */
+/* .flex--blog-previews__item img {
+    width: 100%;
+    height: auto;
+} */
+
+/* .flex--blog-previews__item .img--blog-preview{
+    width: 100%;
+    height: auto;
+} */
+
+.div--blog-author{
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+}
+
+.div--blog-author img {
+    border-radius: 50%;
+}
+/* .img--blog-author-avatar{
+    border-radius: 50%;
+    float: left;
+} */
+
+.div--blog-author span{
+    display: inline-block; /* je nutne? */
+    margin-left: 10px;
+
+    color: #ea5822;
+    font-weight: 500;
+    font-family: "Roboto";
+}
+
+.span--blog-author-name{
+    /* display: inline-block; je nutne?
+    margin-left: 10px;
+
+    color: #ea5822;
+    font-weight: 500;
+    font-family: "Roboto"; */
+}
+
+@media (min-width: 1870px){
+    /* .grid{
+        padding: 0 15.88vw;
+    } */
+    .col-12{
+        padding: 0 19.53125vw;
+    }
+}
+
+@media (max-width: 1870px){
+    div [class^="col"] {
+        grid-column: span 12;
+    }
+    .col-12{
+        padding: 0 3.645833333vw;
+        /*3.645833333vw*/
+    }
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1.56vw; /*spocitano pro w1920*/
+} 
+
+.nav{
+    background-color: chocolate;
+    text-align: center;
+}
+
+.col-1{
+    grid-column: span 1;
+}
+.col-2{
+    grid-column: span 2;
+}
+.col-3{
+    grid-column: span 3;
+}
+.col-4{
+    grid-column: span 4;
+}
+.col-5{
+    grid-column: span 5;
+}
+.col-6{
+    grid-column: span 6;
+}
+.col-7{
+    grid-column: span 7;
+}
+.col-8{
+    grid-column: span 8;
+}
+.col-9{
+    grid-column: span 9;
+}
+.col-10{
+    grid-column: span 10;
+}
+.col-11{
+    grid-column: span 11;
+}
+.col-12{
+    grid-column: span 12;
+}
+
+
+
+
+
+.form--search{
+    filter: drop-shadow(0px 10px 30px rgba(234,244,247,0.9));
+    background-color: #ffffff;
+    padding: 10px;
+    max-width: 550px;
+    
+    /* position: relative; */
+    box-sizing: border-box; /*max 550px vcetne okraju*/
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Search Courses */
+.form--search input[type="search"]{
+    border: none;
+    font-size: 1.25rem;
+    /* line-height: 22px; */
+    color: #5b7076;
+    font-weight: 500;
+    font-family: "Hind";
+
+    /* padding: 0 0 0 25px; */
+    padding-left: 25px;
+    width: 100%;
+}
+
+/* angle down arrow*/
+/* pridat focus, active, hover atp */
+.form--search button[type="button"]{
+    background-color: transparent;
+    border: none;
+    font-size: 1.25rem;
+    /* line-height: 22px; */
+    color: #5b7076;
+    width: 65px; 
+    height: 65px;
+    padding: 0;
+
+    flex-shrink: 0;
+}
+
+/* search icon button */
+.form--search button[type="submit"]{
+    /* relativni jednotky proti rem/vw? */
+    width: 65px; 
+    height: 65px;
+    background-color: #ea5822;
+    border: none;
+    padding: 0;
+
+    font-size: 1.125rem;
+
+    /* position: absolute;
+    right: 10px; */
+
+    /* align-self: flex-end; */
+    flex-shrink: 0;
+}
+
+.div--vline{
+    display: inline-block;
+    width: 3px;
+    height: 40px;
+    background-color: #ea5822;
+}
+
+.span--hotline{
+    display: block;
+
+    font-size: 0.8125rem;
+/* line-height: 22px; */
+    color: #667e85;
+    font-weight: 700;
+    font-family: "Hind";
+}
+
+.div--hotline{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div--hotline__item{
+    display: block;
+}
+
+.div--hotline p{
+    display: block;
+    width: max-content;
+}
+
+.div--hotline .icon{
+    font-size: 2rem;
+    display: inline;
+}
+
+.div--hotline-nevim{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.div--hotline-nevim a{
+    font-size: 18px;
+    /* letter-spacing: -1px; */
+    /* line-height: 22px; */
+    color: #062a35;
+    font-weight: 700;
+    font-family: "Roboto";
+    
+
+    text-decoration: none;
+}

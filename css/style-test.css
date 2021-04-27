@@ -1,0 +1,167 @@
+/* hodnoty vw jsou +/- spocitane podle PSD predlohy jako (N[px])*100/1920 */
+
+body{
+    padding: 0; /*0 3.65vw;*/
+    margin: 0 3.65vw;
+}
+
+@media (min-width: 992px){
+    .grid{
+        padding: 0 15.88vw;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 991px){
+    body {
+        background-color: teal;
+    }
+}
+
+/* @media (max-width: 576px){ */
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: 1.56vw; /*spocitano pro w1920*/
+    } 
+    
+    .grid [class^="col"]{
+        background-color: brown;
+        text-align: center;
+    }
+    
+    .nav{
+        background-color: chocolate;
+        text-align: center;
+    }
+    
+    .col-1{
+        grid-column: span 1;
+    }
+    .col-2{
+        grid-column: span 2;
+    }
+    .col-3{
+        grid-column: span 3;
+    }
+    .col-4{
+        grid-column: span 4;
+    }
+    .col-5{
+        grid-column: span 5;
+    }
+    .col-6{
+        grid-column: span 6;
+    }
+    .col-7{
+        grid-column: span 7;
+    }
+    .col-8{
+        grid-column: span 8;
+    }
+    .col-9{
+        grid-column: span 9;
+    }
+    .col-10{
+        grid-column: span 10;
+    }
+    .col-11{
+        grid-column: span 11;
+    }
+    .col-12{
+        grid-column: span 12;
+    }
+    
+    .vysoky{
+        height: 668px;
+    }
+    
+    .maly{
+        height: 320px;
+    }
+    
+    .flex{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        /* align-items: center; pro BRANDS */
+        background-color: cornflowerblue;
+        text-align: center;
+        /* justify-content: space-between; */
+    }
+    
+    .flex-item{
+        /* width: 100%; */
+        background-color: yellow;
+        flex-grow: 1;
+    }
+    
+    img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+    }
+
+
+@media (max-width: 979px){
+    div [class^="col"] {
+        grid-column: span 12;
+    }
+}
+
+
+/* .grid--main{
+    display: grid;
+    grid-template-columns: 15.88vw auto 15.88vw;
+    grid-template-areas:
+    "header header header"
+    ". content ."
+    "footer footer footer";
+}
+
+.grid--main__header{
+    grid-area: header;
+}
+
+.grid--main__content{
+    grid-area: content;
+}
+
+.grid--main__footer{
+    grid-area: footer;
+}*/
+
+
+
+/* utility classes - main design */
+
+
+
+/* end utility */
+
+
+
+
+/* block classes */
+
+
+
+/* end block */
+
+
+
+/* element classes */
+
+
+
+/* end element */
+
+
+
+
+/* modifiers */
+
+
+
+/* end modifiers */
