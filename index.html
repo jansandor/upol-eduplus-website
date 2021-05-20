@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600&family=Roboto:wght@400;500;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/5219ed4f69.js" crossorigin="anonymous"></script>
@@ -123,40 +123,40 @@
                 </form>
                 <div class="div--hotline">
                     <p class="div--hotline__item">Sed ut perspiciatis unde omnis natus error sit voluptatem</p>
+                    <!--  -->
                     <div class="div--vline div--hotline__item"></div>
                     <!-- todo -->
-                    <div class="div--hotline__item">
+                    <div class="div--hotline__item x">
                         <i class="fas fa-phone icon"></i>
                         <div class="div--hotline-nevim">
                             <span class="span--hotline">ONLINE SUPPORT</span>
                             <a href="tel:+0123456789">+012 (345) 6789</a>
                         </div>
-
                     </div>
                 </div>
             </section>
         </header>
         <!-- facts -->
-        <ul class="col-12">
+        <ul class="col-12 ul--facts">
             <li>
                 <i class="fas fa-users icon"></i>
-                <p>3045+</p>
-                <p>Satisfied Students</p>
+                <span class="span--number">3045+</span>
+                <span class="span--title">Satisfied Students</span>
             </li>
             <li>
                 <i class="fas fa-book icon"></i>
-                <p>7852+</p>
-                <p>Available Courses</p>
+                <span class="span--number">7852+</span>
+                <span class="span--title">Available Courses</span>
             </li>
             <li>
                 <i class="fas fa-graduation-cap icon"></i>
-                <p>9862+</p>
-                <p>Graduate Students</p>
+                <span class="span--number">9862+</span>
+                <span class="span--title">Graduate Students</span>
             </li>
             <li>
                 <i class="fas fa-laptop-code icon"></i>
-                <p>8963+</p>
-                <p>Active Courses</p>
+                <span class="span--number">8963+</span>
+                <span class="span--title">Active Courses</span>
             </li>
         </ul>
         <!-- facts -->
@@ -176,86 +176,104 @@
                 <!-- TAG -->
                 <h3 class="section--title font--main">Course Categories</h3>
             </header>
-            <article>
-                <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272"
-                    height="203">
-                <h2>Graphics Design (UI)</h2>
-                <p>Web Design Course</p>
-                <i> class="fas fa-users icon"></i>
-                <p>250</p>
-                <i class="fas fa-book icon"></i>
-                <p>800+ Courses</p>
-            </article>
-            <article>
-                <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272"
-                    height="203">
-                <h2>Business Studies</h2>
-                <p>Finance Studies</p>
-                <i class="fas fa-users icon"></i>
-                <p>320</p>
-                <i class="fas fa-book icon"></i>
-                <p>750+ Courses</p>
-            </article>
-            <article>
-                <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272"
-                    height="203">
-                <h2>Web Development</h2>
-                <p>Web Design Course</p>
-                <i class="fas fa-users icon"></i>
-                <p>320</p>
-                <i class="fas fa-book icon"></i>
-                <p>750+ Courses</p>
-            </article>
-            <article>
-                <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272"
-                    height="203">
-                <h2>Product Engineering</h2>
-                <p>Web Design Course</p>
-                <i> class="fas fa-users icon"></i>
-                <p>320</p>
-                <i class="fas fa-book icon"></i>
-                <p>750+ Courses</p>
-            </article>
-            <article>
-                <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272"
-                    height="203">
-                <h2>Basic Photography</h2>
-                <p>Film Movies & Photography</p>
-                <i> class="fas fa-users icon"></i>
-                <p>320</p>
-                <i class="fas fa-book icon"></i>
-                <p>750+ Courses</p>
-            </article>
-            <article>
-                <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272"
-                    height="203">
-                <h2>Medical & Health</h2>
-                <p>Doctors & Nursing</p>
-                <i> class="fas fa-users icon"></i>
-                <p>320</p>
-                <i class="fas fa-book icon"></i>
-                <p>750+ Courses</p>
-            </article>
-            <article>
-                <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272"
-                    height="203">
-                <h2>Marketing Strategy</h2>
-                <p>Social Media Marketing</p>
-                <i> class="fas fa-users icon"></i>
-                <p>250</p>
-                <i class="fas fa-book icon"></i>
-                <p>50+ Courses</p>
-            </article>
-            <article>
-                <img src="https://via.placeholder.com/272x203.webp" alt="Course category image" width="272"
-                    height="203">
-                <h2>Mobile UI Design</h2>
-                <p>Web Design Course</p>
-                <i> class="fas fa-users icon"></i>
-                <p>320</p>
-                <i class="fas fa-book icon"></i>
-                <p>750+ Courses</p>
-            </article>
+            <div class="flex--course-categories">
+                <article class="article--course-category">
+                    <img src="img/index/course_categories/graphic-design.png" alt="Course category image" width="270"
+                        height="200">
+                    <div class="article__div--content">
+                        <h2 class="font--main">Graphics&nbsp;Design&nbsp;(UI)</h2>
+                        <span class="font--text">Web Design Course</span>
+                        <i class="fas fa-users icon"></i>
+                        <span class="icon--title font--text">250</span>
+                        <i class="fas fa-book icon"></i>
+                        <span class="icon--title font--text">800+ Courses</span>
+                    </div>
+                </article>
+                <article class="article--course-category">
+                    <img src="img/index/course_categories/business-studies.png" alt="Course category image" width="270"
+                        height="200">
+                    <div class="article__div--content">
+                        <h2 class="font--main">Business Studies</h2>
+                        <span class="font--text">Finance Studies</span>
+                        <i class="fas fa-users icon"></i>
+                        <span class="icon--title font--text">320</span>
+                        <i class="fas fa-book icon"></i>
+                        <span class="icon--title font--text">750+ Courses</span>
+                    </div>
+                </article>
+                <article class="article--course-category">
+                    <img src="img/index/course_categories/web-development.png" alt="Course category image" width="270"
+                        height="200">
+                    <div class="article__div--content">
+                        <h2 class="font--main">Web Development</h2>
+                        <span class="font--text font--text">Web Design Course</span>
+                        <i class="fas fa-users icon"></i>
+                        <span class="icon--title font--text">320</span>
+                        <i class="fas fa-book icon"></i>
+                        <span class="icon--title font--text">750+ Courses</span>
+                    </div>
+                </article>
+                <article class="article--course-category">
+                    <img src="img/index/course_categories/product-engineering.png" alt="Course category image" width="270"
+                        height="200">
+                    <div class="article__div--content">
+                        <h2 class="font--main">Product Engineering</h2>
+                        <span class="font--text">Web Design Course</span>
+                        <i class="fas fa-users icon"></i>
+                        <span class="icon--title font--text">320</span>
+                        <i class="fas fa-book icon"></i>
+                        <span class="icon--title font--text">750+ Courses</span>
+                    </div>
+                </article>
+                <article class="article--course-category">
+                    <img src="img/index/course_categories/basic-photography.png" alt="Course category image" width="270"
+                        height="200">
+                    <div class="article__div--content">
+                        <h2 class="font--main">Basic Photography</h2>
+                        <span class="font--text">Film Movies & Photography</span>
+                        <i class="fas fa-users icon"></i>
+                        <span class="icon--title font--text">320</span>
+                        <i class="fas fa-book icon"></i>
+                        <span class="icon--title font--text">750+ Courses</span>
+                    </div>
+                </article>
+                <article class="article--course-category">
+                    <img src="img/index/course_categories/medical-health.png" alt="Course category image" width="270"
+                        height="200">
+                    <div class="article__div--content">
+                        <h2 class="font--main">Medical & Health</h2>
+                        <span class="font--text">Doctors & Nursing</span>
+                        <i class="fas fa-users icon"></i>
+                        <span class="icon--title font--text">320</span>
+                        <i class="fas fa-book icon"></i>
+                        <span class="icon--title font--text">750+ Courses</span>
+                    </div>
+                </article>
+                <article class="article--course-category">
+                    <img src="img/index/course_categories/marketing-strategy.png" alt="Course category image" width="270"
+                        height="200">
+                    <div class="article__div--content">
+                        <h2 class="font--main">Marketing Strategy</h2>
+                        <span class="font--text">Social Media Marketing</span>
+                        <i class="fas fa-users icon"></i>
+                        <span class="icon--title font--text">250</span>
+                        <i class="fas fa-book icon"></i>
+                        <span class="icon--title font--text">50+ Courses</span>
+                    </div>
+                </article>
+                <article class="article--course-category">
+                    <img src="img/index/course_categories/mobile-ui-design.png" alt="Course category image" width="270"
+                        height="200">
+                    <div class="article__div--content">
+                        <h2 class="font--main">Mobile UI Design</h2>
+                        <span class="font--text">Web Design Course</span>
+                        <i class="fas fa-users icon"></i>
+                        <span class="icon--title font--text">320</span>
+                        <i class="fas fa-book icon"></i>
+                        <span class="icon--title font--text">750+ Courses</span>
+                    </div>
+                </article>
+            </div>
         </section>
         <!-- sekce popular courses -->
         <section class="col-12 section--green-bg">
@@ -693,7 +711,7 @@
 
                             <a href="" class="btn btn--green-bg"><i class="fas fa-arrow-right btn__icon"></i></a>
                         </div>
-                    </div>d
+                    </div>
                 </article>
             </div>
         </section>

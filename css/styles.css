@@ -13,22 +13,29 @@ font main Roboto
 font text Hind
 */
 
-p{
-    padding: 0;
-    margin: 0;
+body{
+    font-family: 'Hind', sans-serif;
 }
+
+/* .font--text{
+    font-family: 'Hind', sans-serif;
+} */
 
 .font--main{
     font-family: 'Roboto', sans-serif;
     color: #062a35;
 }
+
+p{
+    padding: 0;
+    margin: 0;
+}
+
 .section--green-bg .font--main{
     color: white;
 }
 
-.font--text{
-    font-family: 'Hind', sans-serif;
-}
+
 
 .btn--sign-in{
     color: #062a35;
@@ -297,9 +304,9 @@ img{
 }
 
 @media (min-width: 1870px){
-    /* .grid{
-        padding: 0 15.88vw;
-    } */
+    div [class^="col"] {
+        grid-column: span 12;
+    }
     .col-12{
         padding: 0 19.53125vw;
     }
@@ -428,45 +435,64 @@ img{
 }
 
 .div--vline{
-    display: inline-block;
+    display: block;
+    /* padding: 20px 1.5px; */
     width: 3px;
     height: 40px;
+    min-width: 3px;
+    min-height: 40px;
+    max-width: 3px;
+    max-height: 40px;
     background-color: #ea5822;
+    box-sizing: border-box;
 }
 
 .span--hotline{
-    display: block;
+    /* display: inline; */
 
     font-size: 0.8125rem;
 /* line-height: 22px; */
     color: #667e85;
     font-weight: 700;
     font-family: "Hind";
+
+    display: block;
+    width: fit-content;
 }
 
 .div--hotline{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 550px;
+    box-sizing: border-box;
 }
 
 .div--hotline__item{
-    display: block;
+    display: flex;
+    width: fit-content;
 }
 
-.div--hotline p{
-    display: block;
-    width: max-content;
+p .div--hotline__item{
+    /* display: block; */
+    max-width: 40%;
 }
 
-.div--hotline .icon{
+.div--hotline__item .x{
+    width: 40%;
+}
+
+.div--hotline__item i{
     font-size: 2rem;
-    display: inline;
+    display: inline-block;
 }
 
 .div--hotline-nevim{
     display: flex;
     flex-wrap: wrap;
+    max-width: 50%;
+    /* width: min-content; */
+    /* max-width: fit-content; */
 }
 
 .div--hotline-nevim a{
@@ -479,4 +505,105 @@ img{
     
 
     text-decoration: none;
+
+    display: block;
+    width: fit-content;
+}
+
+.ul--facts{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ul--facts li{
+    /* display: inline-block; */
+    /* width: 270px;
+    height: 132px; */
+    filter: drop-shadow(0px 10px 15px rgba(234,244,247,0.9));
+    background-color: #ffffff;
+}
+
+.ul--facts li .icon{
+    font-size: 40px;
+    /* line-height: 85px; */
+    color: #ea5822;
+}
+
+.ul--facts li .span--number{
+    font-size: 35px;
+    /* line-height: 85px; */
+    color: #ea5822;
+    font-weight: 700;
+    font-family: "Roboto";
+    display: block;
+}
+
+.ul--facts li .span--title{
+    font-size: 15px;
+    /* line-height: 85px; */
+    color: #6e838a;
+    font-weight: 500;
+    font-family: "Hind";
+}
+
+/* home/course-categories */
+
+.flex--course-categories{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.article--course-category{
+    max-width: 270px; /* podle obrazku */
+    /* min-width: fit-content; */
+    /* width: 100%; */
+}
+
+.article--course-category img{
+    /* width: 270px;
+    height: 200px; */
+    /* width: 270px; */
+}
+
+.article--course-category .article__div--content{
+    /*block, borderbox*/
+    padding: 2vw;
+    border-right: 2px solid #e6e6e6;
+    border-bottom: 2px solid #e6e6e6;
+    border-left: 2px solid #e6e6e6;
+}
+
+.article--course-category h2{
+    font-size: 22px;
+    /* letter-spacing: -1px;
+    line-height: 85px; */
+    color: #062a35;
+    font-weight: 700;
+    /* font-family: "Roboto"; */
+    margin: 0;
+    padding: 0;
+}
+
+.article--course-category h2 + span{
+    font-size: 1rem;
+    /* line-height: 85px; */
+    color: #708389;
+    font-weight: 400;
+    /* font-family: "Hind"; */
+    display: block;
+}
+
+.article--course-category .icon{
+    margin-right: 7px;
+}
+
+.article--course-category .icon--title{
+    /* font-size: 15px; */
+    /* line-height: 85px; */
+    /* color: #708389; */
+    font-weight: 400;
+    /* font-family: "Hind"; */
 }
