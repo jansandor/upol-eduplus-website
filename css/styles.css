@@ -14,41 +14,110 @@ font text Hind
 */
 
 body{
+    margin: 0;
+
     font-family: 'Hind', sans-serif;
+    font-weight: 500;
 }
 
-/* .font--text{
-    font-family: 'Hind', sans-serif;
-} */
+.div--top-bar+header{
+    background-color: #eaf4f7;
+}
 
 .font--main{
     font-family: 'Roboto', sans-serif;
     color: #062a35;
 }
 
+.div--bg-img{
+    background-image: url('img/index/header-home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+.div--top-bar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    justify-content: space-between;
+
+    background-color: #d1eef6;
+    
+    /* width: max-content; 5/6/21 vs 100% */
+}
+
+.div--top-bar__div--btns{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    flex-grow: 0;
+}
+
+/* podle vseho asi redundandni 5/6/21 */
+.nav--main{
+    flex-grow: 11; /*zarovnani menu doleva at licuje vlevo s obsahem*/
+    /* display: flex; */
+    /* align-items: center; */ /*zdedeno z top bar?*/
+
+    /* justify-content: flex-start; */
+}
+
+.h1--logo{
+    font-size: 45px;
+    font-weight: 900;
+    min-width: fit-content;
+    margin: 0;
+    /* margin: 0 4vw 0 0; */
+   /* letter-spacing: -1px;
+    line-height: 22px;
+    color: #062a35; */
+    flex-grow: 1; /* kvuli grow menu v top bar flexu*/
+}
+
+.h1--logo a{
+    text-decoration: none;
+    display: flex;
+    align-items: center; /* mozna trochu zbytecne ale nicemu to nevadi*/
+}
+
+.h1--logo a img{
+    margin-right: 10px;
+}
+
+.h1--logo a:visited{
+    color: #062a35;
+}
+
+.h1--logo a span{
+    font-weight: 400;
+}
+
+
+
+
+
 p{
     padding: 0;
     margin: 0;
 }
 
-.section--green-bg .font--main{
-    color: white;
-}
-
-
-
-.btn--sign-in{
-    color: #062a35;
-    font-size: 1em;
-}
-
-.section--green-bg{
+.section--available-courses-bg{
     background-color: #062a35;
 }
 
-body{
-    /* padding: 0 3.65vw; */
-    margin: 0; /* 3.65vw; */
+.section--instructors-bg{
+    background-color: #eaf4f7;
+}
+
+.section--students-feedback-bg{
+    /* background-image: url("img/index/students_feedback/cover.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: #c2c2d6;
 }
 
 img{
@@ -59,6 +128,84 @@ img{
 .icon{
     color: #ea5822;
 }
+
+/* top bar buttons */
+
+.btn--fb{
+    /* display: inline-block; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+    margin: 0 4px;
+    /* padding: 10.5px 19.375px; */
+
+    /* text-align: center; */
+    /* vertical-align: baseline; */
+    background-color: #ea5822;
+    color: #ffffff;
+
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.btn--ytb{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+    margin: 0 4px;
+
+    background-color: #ffffff;
+    color: #ea5822;
+
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.btn--sign-in{
+    /* max-width: 120px; */
+    padding: 17px 28px;
+    margin: 0 4px;
+    /* max-height: 50px; */
+
+    color: #062a35;
+    background-color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+/* line-height: 22px; */
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn--sign-in .icon{
+    margin-right: 7px;
+}
+
+.btn--squares{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* box-sizing: border-box; */
+    width: 50px;
+    height: 50px;
+    margin-left: 34px;
+    /* padding: 3px; */
+
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn--squares .icon{
+    font-size: 3rem;
+}
+
+/* top bar buttons END */
 
 .icon--title{
     color: #708389;
@@ -76,10 +223,13 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    font-weight: 600;
 }
 
 .tag--welcome{
     justify-content: flex-start;
+    padding-top: 100px;
 }
 
 .icon--square{
@@ -95,13 +245,17 @@ img{
     margin: 2.5px;
 }
 
-.div--relative{
+.div--relative-blog-previews{
     position: relative;
 }
 
+.img--blog-preview{
+    display: block;
+}
+
 .div--blog-preview-content{
-    /* display: block;
-    box-sizing: border-box; */
+    /* display: block;*/
+    box-sizing: border-box;
 
     padding: 2vw;
     border-right: 2px solid #e6e6e6;
@@ -159,53 +313,100 @@ img{
 }
 
 .tag--title{
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: #ea5822;
     padding: 0 1rem;
     margin: 0;
     /* margin: 1rem 0; */
+
+    font-size: 1.125rem;
+    font-weight: 600;
     text-align: center;
 
-    /* letter-spacing: -1px; */
-    /* line-height: 85px; 5,3125 rem? */
+    letter-spacing: -1px;
+    line-height: 85px;
+
+    color: #ea5822;    
 }
 
-.section--title{
+h3.section--title.font--main{
     font-size: 3rem;
     font-weight: 700;
+    
     margin: 0 0 4.6875vw 0;
     text-align: center;
 
-    /* letter-spacing: -1px; */
+    letter-spacing: -1px;
     /* line-height: 85px; 5,3125 rem? */
 }
 
+.section--available-courses-bg h3.section--title.font--main{
+    color: #ffffff;
+}
+
 .strong{
-    display: inline-block;
+    /* display: block; */
     font-size: 5rem;
-    /* max-width: 45%; zalomeni za 1200*/
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 85px;
+}
+
+.strong--newline{
+    display: block;
 }
 
 .menu{
     display: flex;
-    width: 100%;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    /* width: 100%; */
+
     list-style: none;
 }
 
 .menu a{
     display: block;
-    padding: 1em;
+    /* padding: 1em; */
 }
 
 .menu__item{
-    flex: 1;
+    
 }
 
 .menu__item:hover .submenu{
     display: block;
-    z-index: 100;
+    z-index: 100; 
 }
+
+.menu__item--link-main{
+    display: flex;
+    align-items: center;
+}
+
+.menu__item--link-main a{
+    text-decoration: none;
+    padding: 0;
+}
+
+.menu__item--link-main a:visited{
+    color: #062a35;
+}
+
+/* .dropdown-arrow:hover .submenu{
+    display: block;
+    z-index: 100;
+} */
+
+.menu__item--link-main i{
+    /* display: block; */
+    margin-left: 7px;
+    font-size: 15px;
+}
+
+/* .menu__item--link-main i:hover .submenu{
+    display: block;
+    z-index: 100;
+} */
 
 .submenu{
     display: none;
@@ -258,6 +459,7 @@ img{
     flex: 1;
     max-width: 370px; /* dle obrazku*/
     /* margin: 1.822916667vw; */
+    margin-bottom: 30px;
 }
 
 /* nova trida pro img */
@@ -303,12 +505,18 @@ img{
     font-family: "Roboto"; */
 }
 
-@media (min-width: 1870px){
+@media (min-width: 1871px){
     div [class^="col"] {
         grid-column: span 12;
     }
     .col-12{
         padding: 0 19.53125vw;
+    }
+    /* .div--top-bar{
+        padding: 1.6667vw 3.645833333vw 9.4791667vw 3.645833333vw;
+    } */
+    .div--top-bar{
+        padding: 0 3.645833333vw;
     }
 }
 
@@ -318,7 +526,6 @@ img{
     }
     .col-12{
         padding: 0 3.645833333vw;
-        /*3.645833333vw*/
     }
 }
 
@@ -373,34 +580,36 @@ img{
 
 
 
-
+/* SEARCH BAR */
 .form--search{
-    filter: drop-shadow(0px 10px 30px rgba(234,244,247,0.9));
-    background-color: #ffffff;
-    padding: 10px;
-    max-width: 550px;
-    
     /* position: relative; */
     box-sizing: border-box; /*max 550px vcetne okraju*/
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    max-width: 550px;
+    padding: 10px;
+    margin: 55px 0 45px 0;
+
+    background-color: #ffffff;
+    filter: drop-shadow(0px 10px 30px rgba(234,244,247,0.9));
 }
 
 /* Search Courses */
 .form--search input[type="search"]{
-    border: none;
-    font-size: 1.25rem;
-    /* line-height: 22px; */
-    color: #5b7076;
-    font-weight: 500;
-    font-family: "Hind";
-
     /* padding: 0 0 0 25px; */
     padding-left: 25px;
     width: 100%;
-}
 
+    border: none;
+
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 22px;
+
+    color: #5b7076;    
+}
 /* angle down arrow*/
 /* pridat focus, active, hover atp */
 .form--search button[type="button"]{
@@ -415,25 +624,21 @@ img{
 
     flex-shrink: 0;
 }
-
 /* search icon button */
 .form--search button[type="submit"]{
-    /* relativni jednotky proti rem/vw? */
+    flex-shrink: 0;
     width: 65px; 
     height: 65px;
-    background-color: #ea5822;
-    border: none;
+
     padding: 0;
 
     font-size: 1.125rem;
-
-    /* position: absolute;
-    right: 10px; */
-
-    /* align-self: flex-end; */
-    flex-shrink: 0;
+    border: none;
+    background-color: #ea5822;
 }
+/* SEARCH BAR END*/
 
+/* HOTLINE */
 .div--vline{
     display: block;
     /* padding: 20px 1.5px; */
@@ -448,16 +653,17 @@ img{
 }
 
 .span--hotline{
-    /* display: inline; */
-
-    font-size: 0.8125rem;
-/* line-height: 22px; */
+    font-size: 13px;
+    line-height: 22px;
     color: #667e85;
     font-weight: 700;
-    font-family: "Hind";
+
+    /* display: inline;
+
+    font-size: 0.8125rem;
 
     display: block;
-    width: fit-content;
+    width: fit-content; */
 }
 
 .div--hotline{
@@ -466,28 +672,52 @@ img{
     align-items: center;
     max-width: 550px;
     box-sizing: border-box;
+
+    margin:  0 0 180px 0;
 }
 
 .div--hotline__item{
+    display: block;
     display: flex;
     width: fit-content;
+    align-items: center;
+
+    /* flex-grow: 2; */
 }
 
-p .div--hotline__item{
-    /* display: block; */
+.div--hotline__item .icon{
+    display: inline-block;
+    padding: 6px;
+    font-size: 2.5rem;
+}
+
+.div--hotline p{
+    display: inline-block;
     max-width: 40%;
+
+    color: #6e838a;
+
+    line-height: 25px;
+    font-weight: 500;
+    /* flex-grow: 1; */
 }
 
-.div--hotline__item .x{
-    width: 40%;
+.div--hotline__subitem{
+    display: flex;
+    flex-direction: column;
+    width: max-content;
 }
+
+/* .div--hotline__item .x{
+    width: 40%;
+} */
 
 .div--hotline__item i{
     font-size: 2rem;
     display: inline-block;
 }
 
-.div--hotline-nevim{
+.test{
     display: flex;
     flex-wrap: wrap;
     max-width: 50%;
@@ -495,105 +725,144 @@ p .div--hotline__item{
     /* max-width: fit-content; */
 }
 
-.div--hotline-nevim a{
-    font-size: 18px;
-    /* letter-spacing: -1px; */
-    /* line-height: 22px; */
-    color: #062a35;
-    font-weight: 700;
-    font-family: "Roboto";
-    
-
-    text-decoration: none;
-
+.div--hotline__subitem a{
     display: block;
     width: fit-content;
+
+    font-size: 18px;
+    letter-spacing: -1px;
+    line-height: 22px;
+    color: #062a35;
+    font-weight: 700;  
+
+    text-decoration: none;    
 }
+/* HOTLINE END */
+
+/* FACTS */
+
+/* .div--relative{ */
+    /* position: relative; */
+    /* background: rgb(9,9,121); */
+    /* display: block; */
+    /* padding-bottom: 15px;
+
+    background: rgb(91,112,118);
+    background: linear-gradient(180deg, rgba(91,112,118,1) 0%, rgba(91,112,118,1) 35%, rgba(255,255,255,1) 35%);
+
+} */
 
 .ul--facts{
-    list-style: none;
+    /* position: absolute; */
+    /* z-index: 99; */
+
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+
+    margin: 0;
+
+    list-style: none;
 }
 
-.ul--facts li{
-    /* display: inline-block; */
-    /* width: 270px;
-    height: 132px; */
+.ul__li--facts{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+
+    max-width: 270px;
+    width: 100%;
+    max-height: 133px;
+    height: 100%;
+
+    padding: 40px;
+
     filter: drop-shadow(0px 10px 15px rgba(234,244,247,0.9));
     background-color: #ffffff;
 }
 
-.ul--facts li .icon{
+.ul__li--facts .icon{
+    /* space between na li vs margin? */
+    /* margin-right: 20px; */
     font-size: 40px;
     /* line-height: 85px; */
     color: #ea5822;
 }
 
-.ul--facts li .span--number{
+.ul__li--facts .span--number{
+    display: block;
     font-size: 35px;
     /* line-height: 85px; */
     color: #ea5822;
     font-weight: 700;
-    font-family: "Roboto";
-    display: block;
 }
 
-.ul--facts li .span--title{
+.ul__li--facts .span--title{
+    display: block;
     font-size: 15px;
     /* line-height: 85px; */
     color: #6e838a;
     font-weight: 500;
-    font-family: "Hind";
 }
 
+/* FACTS END*/
+
 /* home/course-categories */
+
+.section--top-bottom-padding{
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
 
 .flex--course-categories{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    /* align-items: stretch; */
 }
 
 .article--course-category{
+    margin-bottom: 30px;
     max-width: 270px; /* podle obrazku */
-    /* min-width: fit-content; */
-    /* width: 100%; */
 }
 
-.article--course-category img{
+.article__img--course-category{
+    display: block;
     /* width: 270px;
     height: 200px; */
     /* width: 270px; */
 }
 
 .article--course-category .article__div--content{
-    /*block, borderbox*/
-    padding: 2vw;
-    border-right: 2px solid #e6e6e6;
+    box-sizing: border-box;
+    /* display: flex; */
+
+    padding: 1vw;
+    border: 1px solid #d7d7d7;
+    /* border-right: 2px solid #e6e6e6;
     border-bottom: 2px solid #e6e6e6;
-    border-left: 2px solid #e6e6e6;
+    border-left: 2px solid #e6e6e6; */
+
+    min-height: 150px;
 }
 
 .article--course-category h2{
     font-size: 22px;
-    /* letter-spacing: -1px;
-    line-height: 85px; */
+    letter-spacing: -1px;
     color: #062a35;
     font-weight: 700;
-    /* font-family: "Roboto"; */
     margin: 0;
     padding: 0;
 }
 
 .article--course-category h2 + span{
+    display: block;
     font-size: 1rem;
-    /* line-height: 85px; */
     color: #708389;
     font-weight: 400;
-    /* font-family: "Hind"; */
-    display: block;
+
+    margin: 15px 0;
 }
 
 .article--course-category .icon{
@@ -605,5 +874,188 @@ p .div--hotline__item{
     /* line-height: 85px; */
     /* color: #708389; */
     font-weight: 400;
-    /* font-family: "Hind"; */
+    margin-right: 1vw;
 }
+
+.article--course-category .icon--title.font--main{
+    font-weight: 500;
+}
+
+/* section popular courses / available courses */
+.div--available-courses{
+    display: flex;
+    justify-content: space-between;
+}
+
+.div__article--available-course{
+    width: 100%;
+    max-width: 370px;
+    margin-bottom: 65px;
+
+    background-color: #ffffff;
+}
+
+.div--relative-available-course{
+    position: relative;
+}
+
+.img--available-course{
+    display: block;
+    box-shadow: inset 50px 50px #062A35;
+}
+
+/*nejaky chytrejsi (mene obecny) selektor na abs*/
+.div--absolute{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+
+    width: 100%;
+    padding: 20px 35px;
+    box-sizing: border-box;
+}
+
+.img--teacher-avatar{
+    border-radius: 50%;
+    margin-right: 14px;
+}
+
+.span--teacher-name{
+    font-size: 20px;
+    /* line-height: 28px; */
+    color: #ffffff;
+    font-weight: 700;
+
+    flex-grow: 2;
+}
+
+.span--course-price{
+    box-sizing: border-box;
+    display: inline-block;
+
+    height: 25px;
+
+    padding: 6px 13px;
+
+    color: #ffffff;
+    background-color: #ea5822;
+
+    border-radius: 12px;
+
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.div--description{
+    padding: 35px;
+}
+
+.div--description-tag-rating{
+    display: flex;
+    align-items: center;
+}
+
+.div--description h2{
+    font-size: 22px;
+    letter-spacing: -1px;
+    line-height: 28px;
+    font-weight: 700;
+
+    margin: 20px 0 30px 0;
+}
+
+.span--tag-course{
+    box-sizing: border-box;
+    display: inline-block;
+    width: fit-content;
+
+    margin-right: 15px;
+    padding: 8px 15px;
+    /* width: 83px; */
+    /* height: 25px; */
+    /* max-height: 25px; */
+    border-radius: 15px;
+    background-color: #4582ff;
+
+    font-size: 13px;
+    /* line-height: 32px; */
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    /* vertical-align: middle; */
+}
+
+/* .tag-english{
+    background-color: #4582ff;
+} */
+
+.div--rating-stars{
+
+}
+
+.div--rating-stars i.icon{
+    font-size: 12px;
+}
+
+.div--course-info{
+    display: flex;
+    align-items: center;
+
+    padding-top: 30px;
+    /* justify-content: space-around; */
+
+    border-top: 1px solid #EBEBEB;
+}
+
+.div--course-info__item{
+    flex-grow: 1;
+}
+
+.div--course-info .icon{
+    margin-right: 7px;
+}
+
+.font--main.div__span--course-info--icon-title{
+    font-size: 15px;
+    /* line-height: 85px; */
+    color: #708389;
+    font-weight: 500;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.btn--view-all-courses{
+    box-sizing: border-box;
+    display: inline-block;
+
+    max-width: 280px;
+    width: 100%;
+    /* max-height: 66px; */
+    /* height: 100%; */
+    padding: 28px 0;
+
+    /* width: 280px; */
+    /* height: 66px; */
+    /* background-color: #ea5822; */
+    border: 2px solid #113742;
+
+    font-size: 14px;
+    color: #417b8d;
+    font-weight: 700;
+    text-align: center;
+    /* vertical-align: middle; */
+    text-decoration: none;
+}
+
+.btn--view-all-courses i{
+    margin-left: 18px;
+}
+
+/* section popular courses / available courses */
